@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Prediction</title>
+</head>
+<body>
+    <h2>Cardiovascular Disease Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="gender"><br>
+        <label for="height">Height:</label><br>
+        <input type="text" id="height" name="height"><br>
+        <label for="weight">Weight:</label><br>
+        <input type="text" id="weight" name="weight"><br>
+        <label for="systolic">Systolic:</label><br>
+        <input type="text" id="systolic" name="systolic"><br>
+        <label for="diastolic">Diastolic:</label><br>
+        <input type="text" id="diastolic" name="diastolic"><br>
+        <label for="cholesterol">Cholesterol:</label><br>
+        <input type="text" id="cholesterol" name="cholesterol"><br>
+        <label for="glucose">Glucose:</label><br>
+        <input type="text" id="glucose" name="glucose"><br>
+        <label for="smoke">Smoke:</label><br>
+        <input type="text" id="smoke" name="smoke"><br>
+        <label for="alcohol">Alcohol:</label><br>
+        <input type="text" id="alcohol" name="alcohol"><br>
+        <label for="active">Active:</label><br>
+        <input type="text" id="active" name="active"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Prediction</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 50%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        margin-top: 20px;
+        margin: 0px 230px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    
+    input[type="text"],
+    select {
+        width: calc(100% - 22px); /* Adjusting the width to consider padding and border */
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    input[type="radio"] + label {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    input[type="radio"]:checked + label {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+    
+    input[type="submit"] {
+        display: block;
+        margin: 0 auto; /* Centering the submit button */
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    </style>
+</head>
+<body>
+    <h2>Cardiovascular Disease Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender">
+            <option value="2">Male</option>
+            <option value="1">Female</option>
+        </select><br>
+        <label for="height">Height:</label><br>
+        <input type="text" id="height" name="height"><br>
+        <label for="weight">Weight:</label><br>
+        <input type="text" id="weight" name="weight"><br>
+        <label for="systolic">Systolic:</label><br>
+        <input type="text" id="systolic" name="systolic"><br>
+        <label for="diastolic">Diastolic:</label><br>
+        <input type="text" id="diastolic" name="diastolic"><br>
+        <label for="cholesterol">Cholesterol:</label><br>
+        <select id="cholesterol" name="cholesterol">
+            <option value="1">Low</option>
+            <option value="2">Mid</option>
+            <option value="3">High</option>
+        </select><br>
+        <label for="glucose">Glucose:</label><br>
+        <select id="glucose" name="glucose">
+            <option value="1">Low</option>
+            <option value="2">Mid</option>
+            <option value="3">High</option>
+        </select><br>
+        <label for="smoke">Smoke:</label><br>
+        <input type="radio" id="smoke_yes" name="smoke" value="1">
+        <label for="smoke_yes">Yes</label>
+        <input type="radio" id="smoke_no" name="smoke" value="0">
+        <label for="smoke_no">No</label><br>
+        <label for="alcohol">Alcohol:</label><br>
+        <input type="radio" id="alcohol_yes" name="alcohol" value="1">
+        <label for="alcohol_yes">Yes</label>
+        <input type="radio" id="alcohol_no" name="alcohol" value="0">
+        <label for="alcohol_no">No</label><br>
+        <label for="active">Active:</label><br>
+        <input type="radio" id="active_yes" name="active" value="1">
+        <label for="active_yes">Yes</label>
+        <input type="radio" id="active_no" name="active" value="0">
+        <label for="active_no">No</label><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

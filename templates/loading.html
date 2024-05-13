@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Loader styles */
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .loader div {
+            width: 15px;
+            height: 15px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            animation: loader-animation 1s infinite ease-in-out alternate;
+            margin: 0 5px;
+        }
+
+        @keyframes loader-animation {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Loading...</h2>
+    <p>Please wait while the model is predicting...</p>
+    <!-- Loader -->
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
